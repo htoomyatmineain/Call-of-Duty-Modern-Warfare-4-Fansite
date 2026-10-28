@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.netlify/
+.vscode/
+.env
+.env.*
+!.env.example
+*.log
