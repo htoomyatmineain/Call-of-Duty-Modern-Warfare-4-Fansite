@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Momo+Trust+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap");
+
+
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Barlow", Arial, sans-serif; }
+/* Navigation */
+.nav-container { width: 100%; height: 70px; background-color: rgb(0,0,0); position: fixed; z-index: 10; top: -70px; transition: top 1s ease; }
+.nav-container.show { top: 0; }
+#navLogo { width: 150px; height: 70px; }
+header { width: 90%; margin: 0 auto; height: 100%; display: flex; flex-direction: row; justify-content: space-between; background-color: black; align-items: center; }
+ul { list-style-type: none; }
+ul li { display: inline-block; }
+nav { color: 20px; display: flex; flex-direction: row; column-gap: 40px; z-index: 10; }
+a { color: white; font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; padding: 15px 20px; }
+a:hover { background-color: gray; color: black; }
+.btnSection { display: flex; flex-direction: row; column-gap: 20px; }
+.navBTN { width: 100px; height: 45px; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; border-radius: 1px; color: black; border: none; background-color: white; padding-top: 5px; }
+#signUp { background: linear-gradient(to bottom, #1866ee, #094084); color: white; }
+/* Hero */
+#herosection { background-image: url(images/hero2.jpg); background-position: center 5%; background-size: cover; width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; position: relative; }
+.herogradient { width: 100%; height: 100%; z-index: 1; position: absolute; background: linear-gradient(to top, black, transparent); }
+.herocontent { color: white; font-size: 16px; text-align: center; z-index: 2; }
+.herocontent button { width: 245px; height: 56px; border-radius: 2px; border: none; background: linear-gradient(to bottom, #3880fc, #04336c); color: white; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-top: 30px; z-index: 10; }
+.herocontent button:hover { transform: scale(.95); transition: transform .2s ease-in-out; }
+i { font-size: 35px; color: white; }
+/* Production */
+#productionsection { width: 100%; height: 100vh; background-color: black; }
+.productioncontainer { width: 90%; margin: auto; height: 100%; background-position: start; background-size: cover; display: flex; flex-direction: row; align-items: center; justify-content: center; column-gap: 80px; }
+.productionimage img { width: 700px; height: 500px; background-size: cover; background-position: center; display: flex; justify-content: center; align-items: center; }
+.productioncontent { display: flex; flex-direction: column; row-gap: 10px; }
+.productioncontent h1 { font-size: clamp(48px, 4.5vw, 76px); color: white; }
+.productioncontent h3 { font-size: 20px; color: #1866ee; }
+.productioncontent p { font-size: 15px; color: gray; font-family: "Barlow", Arial, sans-serif; line-height: 1.8; }
+.productioncontent button { width: 200px; height: 50px; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; background: linear-gradient(to bottom, #1866ee, #094084); color: white; border: none; margin-top: 30px; }
+/* Characters */
+.characterTitle { width: 100%; height: 80px; font-size: 60px; display: flex; align-items: center; text-align: center; overflow: hidden; background: linear-gradient(to bottom, rgb(48,168,76), rgb(15,109,61)); color: white; white-space: nowrap; position: relative; }
+.marquee { display: inline-block; animation: moveRight 20s linear infinite; }
+.marquee span { padding-right: 5px; font-weight: bold; font-family: "Stack Sans Text" !important; }
+@keyframes moveRight { 0% { transform: translateX(-50%); } 100% { transform: translateX(0%); } }
+#charactersection { width: 100%; height: 700px; position: relative; }
+.charactercard { display: none; }
+.charactercard { width: 100%; height: 100%; position: relative; }
+.characterGradient { width: 100%; height: 100%; background: linear-gradient(to right, black 20%, transparent); z-index: 1; position: absolute; }
+.charactercontent { width: 50%; height: 100%; margin: 0 45% 0% 5%; display: flex; flex-direction: column; justify-content: center; z-index: 2; color: white; position: absolute; }
+.charactercontent h1 { font-size: clamp(36px, 4vw, 54px); font-family: "Momo Trust Display"; margin-bottom: 30px; }
+.charactercontent p { font-size: 17px; color: darkgray; font-family: "Stack Sans Text" !important; line-height: 1.8; }
+.chapp { margin-top: 10px; }
+#character1 { background-image: url(images/character1.jpg); background-position: center 5%; background-size: cover; }
+#character2 { background-image: url(images/character2.png); background-position: right; background-size: 85%; }
+#character3 { background-image: url(images/character3.png); background-position: center; background-size: cover; }
+#character4 { background-image: url(images/character4.png); background-position: right; background-size: 90%; }
+#character5 { background-image: url(images/character5.png); background-position: right; background-size: 90%; }
+#character6 { background-image: url(images/character6.png); background-position: right; background-size: 90%; }
+.card_list { position: absolute; top: 550px; width: 100%; height: 300px; overflow-x: auto; display: flex; align-items: center; gap: 20px; padding: 20px; box-sizing: border-box; z-index: 2; background: transparent; scroll-behavior: smooth; }
+.card { width: 300px; height: 200px; border: 2px solid darkgray; border-radius: 2px; background-color: white; flex-shrink: 0; }
+.card img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+#card5 img { object-position: right; }
+#card6 img { object-position: right; }
+.card_list::-webkit-scrollbar { display: none; }
+#extra { width: 100%; height: 200px; background-color: black; position: relative; }
+/* Storyline */
+#storylinesection { width: 100%; height: 600px; background-color: white; display: flex; flex-direction: row; align-items: center; justify-content: space-between; }
+#storycontent { width: 60%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+#storycontent h1 { font-size: clamp(48px, 4.5vw, 76px); margin-bottom: 30px; }
+#storycontent code { font-size: 15px; font-family: "Barlow", Arial, sans-serif; color: rgb(92,89,89); padding-left: 70px; line-height: 1.8; text-align: center; }
+#storyimg img { width: 600px; height: 605px; }
+/* Voice actors */
+#VAsection { width: 100%; height: 900px; background-color: black; padding: 100px 0; }
+#VAcontainer { width: 100%; height: 100%; margin: auto; }
+.VAcontent { width: 80%; color: white; display: flex; flex-direction: column; align-items: center; margin: auto; }
+.VAcontent h1 { margin-bottom: 30px; font-size: clamp(48px, 4.5vw, 76px); }
+.VAcontent p { text-align: center; font-family: "Barlow", Arial, sans-serif; color: darkgray; font-size: 15px; line-height: 1.8; }
+.VAcardList { width: 100%; height: 600px; background-color: black; display: flex; justify-content: space-around; align-items: center; flex-direction: row; overflow-x: auto; padding: 0 10px; }
+.VAcard { width: 300px; height: 400px; display: flex; flex-direction: column; row-gap: 15px; overflow: hidden; border-radius: 3px; border: 2px solid darkgray; flex-shrink: 0; margin: 10px; background-color: #1f1f1f; }
+.VAimg img { width: 300px; height: 300px; object-fit: cover; object-position: center 5%; }
+.VA-card-content { display: flex; flex-direction: column; justify-content: center; color: darkgray; padding-left: 20px; }
+.VA-card-content h2 { font-family: "Bebas Neue", Impact, sans-serif; font-size: 28px; font-weight: 400; line-height: 1.1; }
+.VA-card-content h4 { font-family: "Barlow", Arial, sans-serif; font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: .13em; }
+.VAcardList::-webkit-scrollbar { display: none; }
+/* In-game section */
+#ingamesection { width: 100%; height: 100vh; background-color: black; }
+#ingamesection h1 { color: white; font-size: clamp(48px, 4.5vw, 76px); text-align: center; margin-bottom: 30px; }
+#gameblocksList { width: 100%; height: 600px; display: flex; align-items: center; justify-content: center; background-color: rgb(54,53,53); flex-direction: row; }
+#blocksection1 { width: 50%; }
+
+/* Cinematic typography; character typography and composition remain distinct. */
+.herocontent h1,
+.productioncontent h1,
+#storycontent h1,
+.VAcontent h1,
+#ingamesection h1 {
+  font-family: "Bebas Neue", Impact, "Arial Narrow", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: .98;
+}
+.herocontent h1 { font-size: clamp(64px, 8.5vw, 150px); letter-spacing: -.015em; line-height: .95; }
+.herocontent p { font-size: 16px; line-height: 1.6; margin-top: 24px; }
+.productioncontent h3 { font-weight: 500; line-height: 1.3; }
+
+/* Tactical cinematic theme */
+:root {
+  color-scheme: dark;
+  --charcoal: #0b0e0c;
+  --surface: #151b14;
+  --military: #b3d45b;
+  --muted: #b0baa7;
+  --border: #39432f;
+}
+body { background: var(--charcoal); color: #eef0e7; }
+::selection { background: var(--military); color: var(--charcoal); }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--military); outline-offset: 5px; }
+.nav-container { background: rgb(11 14 12 / 96%); border-bottom: 1px solid var(--border); }
+header { background: transparent; }
+a { color: #c4cbbc; }
+a:hover { background: #242d1e; color: var(--military); }
+.navBTN { background: transparent; color: #eef0e7; border: 1px solid #566345; padding-top: 0; }
+#signUp { background: var(--military); color: #12190a; border-color: var(--military); }
+#herosection { min-height: 700px; background-position: center; }
+.herogradient { background: linear-gradient(90deg, rgb(5 12 8 / 90%), rgb(5 12 8 / 45%) 52%, rgb(5 12 8 / 10%)), linear-gradient(0deg, var(--charcoal), transparent 65%); }
+.herocontent { width: 90%; text-align: left; padding: 100px 0 70px; }
+.herocontent::before { content: 'CALL OF DUTY / MODERN WARFARE II'; display: block; color: var(--military); font-size: 11px; font-weight: 600; letter-spacing: .22em; margin-bottom: 28px; }
+.herocontent h1 { max-width: 800px; font-size: clamp(64px, 8.5vw, 140px); line-height: .9; text-wrap: balance; }
+.herocontent p { color: #c3ccbc; font-size: 17px; letter-spacing: .02em; }
+.herocontent button { background: var(--military); color: #12190a; border: 1px solid var(--military); border-radius: 0; margin-top: 36px; }
+.herocontent button:hover { background: #c8e57e; transform: none; }
+#productionsection { background: var(--charcoal); }
+.productionimage img { object-fit: cover; filter: saturate(.6) contrast(1.05); border: 1px solid var(--border); }
+.productioncontent h1 { line-height: 1; }
+.productioncontent h3 { color: var(--military); }
+.productioncontent p { color: var(--muted); }
+.productioncontent button { background: transparent; border: 1px solid #65764d; border-radius: 0; color: #eef0e7; }
+.productioncontent button:hover { background: var(--military); color: var(--charcoal); }
+.characterTitle { background: #1c2817; border-block: 1px solid #53673b; color: var(--military); }
+/* Keep the original character panels, gradients, thumbnail sizes and positioning. */
+#charactersection, #extra { background-color: var(--charcoal); }
+.card { border-color: #566345; background: var(--surface); }
+.card:hover, .card:focus-visible { border-color: var(--military); }
+#storylinesection { background: #192015; color: #eef0e7; border-block: 1px solid var(--border); }
+#storycontent h1 { color: #eef0e7; }
+#storycontent code { color: #b8c2ad; }
+#storyimg img { object-fit: cover; filter: saturate(.65); }
+#VAsection { background: var(--charcoal); }
+.VAcontent p { color: var(--muted); }
+.VAcardList { background: transparent; }
+.VAcard { background: var(--surface); border: 1px solid var(--border); border-radius: 0; }
+.VAimg img { filter: grayscale(.7) contrast(1.06); }
+.VA-card-content { color: #eef0e7; border-top: 2px solid #657849; padding-top: 12px; }
+.VA-card-content h4 { color: var(--military); margin-top: 8px; }
+#ingamesection { background: var(--charcoal); border-top: 1px solid var(--border); padding-top: 50px; }
+#gameblocksList { background: #141b11; border-block: 1px solid var(--border); }
+@media (prefers-reduced-motion: reduce) {
+  .marquee { animation: none; }
+  .nav-container, .herocontent button:hover { transition: none; }
+  .card_list { scroll-behavior: auto; }
+}
