@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Hide all characters
   function hideAll() {
-    characters.forEach(c => c.style.display = "none");
+    characters.forEach(c => { c.style.display = "none"; c.setAttribute("aria-hidden", "true"); });
   }
 
   // Show character by numeric index or id number (1-based)
@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const byId = document.getElementById("character" + num);
     if (byId) {
       byId.style.display = "block";
+      byId.setAttribute("aria-hidden", "false");
+      cards.forEach((card, index) => card.setAttribute("aria-pressed", String(index + 1 === Number(num))));
       return true;
     }
     // fallback: try index (num-1)
@@ -40,6 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // attach listeners
   cards.forEach((card, i) => {
+    const name = characters[i]?.querySelector("h1")?.textContent || `Operator ${i + 1}`;
+    card.setAttribute("role", "button");
+    card.setAttribute("aria-label", `View ${name}`);
+    card.setAttribute("aria-controls", characters[i]?.id || "charactersection");
+    const label = document.createElement("span");
+    label.className = "operator-label";
+    label.textContent = `${String(i + 1).padStart(2, "0")} / ${name}`;
+    card.append(label);
     card.addEventListener("click", (e) => {
       // try to extract trailing number from id like "card3"
       const m = card.id && card.id.match(/(\d+)\s*$/);
@@ -51,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       // optional: bring clicked card into view center
       if (card.scrollIntoView) {
-        card.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+        card.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", inline: "center", block: "nearest" });
       }
     });
     // make sure card is keyboard accessible

@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Momo+Trust+Display&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 
 
@@ -156,3 +155,135 @@ a:hover { background: #242d1e; color: var(--military); }
   .nav-container, .herocontent button:hover { transition: none; }
   .card_list { scroll-behavior: auto; }
 }
+
+/* Cinematic operator direction, adapted from the selected Mobbin reference. */
+:root {
+  --military: #b3c581;
+  --muted: #b3b9ab;
+  --border: #343b2e;
+  --display: "Bebas Neue", Impact, "Arial Narrow", sans-serif;
+  --mono: "Courier New", monospace;
+  --gutter: clamp(22px, 5vw, 88px);
+}
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+body { overflow-wrap: break-word; }
+.nav-container { top: 0; height: 80px; transition: none; }
+header { width: auto; margin-inline: var(--gutter); gap: 24px; }
+#navLogo { width: 125px; height: 58px; object-fit: contain; }
+nav ul { display: flex; align-items: center; }
+nav a { display: block; padding: 18px 16px; font-size: 10px; }
+.btnSection { gap: 10px; }
+.navBTN { height: 40px; width: 90px; }
+#herosection { min-height: 760px; height: 100svh; max-height: 1200px; isolation: isolate; }
+.herogradient { background: linear-gradient(90deg, rgb(5 12 8 / 88%), rgb(5 12 8 / 30%) 65%, rgb(5 12 8 / 8%)), linear-gradient(0deg, var(--charcoal), transparent 45%); }
+.herocontent { width: 100%; padding: 150px var(--gutter) 100px; }
+.herocontent::before { font-family: var(--mono); font-size: 11px; letter-spacing: .16em; }
+.herocontent h1 { max-width: 900px; font-size: clamp(76px, 10vw, 160px); letter-spacing: -.015em; line-height: .86; }
+.hero-period { color: var(--military); }
+.herocontent p { margin-top: 28px; font-size: 17px; }
+.hero-actions { display: flex; align-items: center; gap: 28px; margin-top: 36px; flex-wrap: wrap; }
+.herocontent button { margin: 0; width: 220px; }
+.secondary-action { display: inline-flex; align-items: center; gap: 24px; padding: 18px 0; font-size: 11px; border-bottom: 1px solid var(--border); }
+.secondary-action:hover { background: transparent; color: var(--military); }
+.secondary-action span { font-size: 20px; }
+#productionsection { height: auto; padding: 100px var(--gutter); border-bottom: 1px solid var(--border); }
+.productioncontainer { width: 100%; display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(32px, 6vw, 100px); }
+.productionimage, .productioncontent { min-width: 0; }
+.productionimage img { width: 100%; height: auto; aspect-ratio: 1.35; object-fit: cover; }
+.productioncontent h1 { font-size: clamp(48px, 5vw, 76px); }
+.productioncontent h3 { font-family: var(--mono); font-size: 13px; text-transform: uppercase; letter-spacing: .15em; margin-block: 12px; }
+.productioncontent p { max-width: 48ch; }
+.characterTitle { height: 74px; font-size: 42px; background: var(--charcoal); border-block: 0; }
+.marquee { animation: none; padding-inline: var(--gutter); }
+.marquee span { font-family: var(--display) !important; font-weight: 400; letter-spacing: .06em; }
+.marquee span + span { display: none; }
+#charactersection { height: auto; padding-bottom: 0; }
+.charactercard { height: 630px; background-repeat: no-repeat; background-color: var(--charcoal); }
+.characterGradient { background: linear-gradient(90deg, var(--charcoal) 5%, rgb(11 14 12 / 85%) 26%, transparent 75%), linear-gradient(0deg, var(--charcoal), transparent 35%); }
+.charactercontent { width: 48%; height: 100%; margin: 0; left: var(--gutter); padding-block: 60px; }
+.charactercontent h1 { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: clamp(48px, 5.5vw, 84px); line-height: .95; margin-bottom: 28px; }
+.charactercontent p { font-family: var(--mono) !important; font-size: 12px; color: var(--muted); line-height: 1.9; }
+.charactercontent p:not(.chapp) { border-bottom: 1px solid var(--border); padding-block: 9px; }
+.charactercontent .chapp { font-family: "Barlow", Arial, sans-serif !important; font-size: 15px; max-width: 48ch; margin-top: 20px; }
+.card_list { position: relative; top: auto; height: auto; padding: 0 var(--gutter) 48px; gap: 14px; align-items: stretch; }
+.card { position: relative; width: 220px; height: 155px; border-width: 1px; border-radius: 0; overflow: hidden; cursor: pointer; }
+.card img { filter: saturate(.55); }
+.operator-label { position: absolute; bottom: 0; inset-inline: 0; padding: 24px 12px 12px; background: linear-gradient(transparent, rgb(0 0 0 / 95%)); color: #eef0e7; font: 10px/1.5 var(--mono); }
+.card[aria-pressed="true"] { border-color: var(--military); box-shadow: inset 0 -3px var(--military); }
+.card[aria-pressed="true"] .operator-label { color: var(--military); }
+#extra { display: none; }
+#storylinesection { height: auto; display: grid; grid-template-columns: 1fr 1fr; }
+#storycontent { width: 100%; padding: 80px var(--gutter); align-items: flex-start; }
+#storycontent code { padding: 0; text-align: left; font-family: "Barlow", Arial, sans-serif; }
+#storyimg { height: 100%; min-width: 0; }
+#storyimg img { width: 100%; height: 100%; min-height: 500px; object-fit: cover; }
+#VAsection { height: auto; padding: 100px 0 70px; }
+.VAcontent { width: auto; margin-inline: var(--gutter); align-items: flex-start; }
+.VAcontent p { max-width: 70ch; text-align: left; }
+.VAcardList { height: auto; justify-content: flex-start; padding: 40px var(--gutter) 20px; gap: 20px; }
+.VAcard { width: 240px; height: auto; margin: 0; }
+.VAimg img { display: block; width: 100%; height: 260px; }
+.VA-card-content { padding: 20px; }
+#ingamesection { height: auto; padding: 70px var(--gutter); }
+#ingamesection h1 { text-align: left; }
+#gameblocksList { height: auto; min-height: 440px; display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 8px; background: transparent; border: 0; }
+#blocksection1 { width: 100%; display: grid; gap: 8px; }
+#blockrow1, .blockrow2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+#gameblocksList > div, #blocksection1 > div > div { min-height: 190px; background-size: cover; background-position: center; }
+#block1 { background-image: url(images/hero1.jpg); }
+#block2 { background-image: url(images/hero3.jpg); }
+#block3 { background-image: url(images/multiplayer.webp); }
+#block4 { background-image: url(images/hero4.jpg); }
+#blocksection2 { background-image: url(images/section_1_background.jpg); }
+#blocksection3 { background-image: url(images/hero2.jpg); }
+footer { display: flex; gap: 24px; justify-content: space-between; align-items: center; padding: 32px var(--gutter); border-top: 1px solid var(--border); color: var(--muted); font: 10px/1.6 var(--mono); }
+footer a { padding: 12px 0; font-size: 10px; }
+@media (min-width: 1800px) {
+  .productioncontainer, #VAcontainer { max-width: 1600px; margin-inline: auto; }
+}
+@media (max-width: 1000px) {
+  header { gap: 12px; }
+  nav a { padding: 16px 9px; letter-spacing: .08em; }
+  .navBTN { width: 70px; }
+  .charactercontent { width: 55%; }
+  #storycontent { padding: 60px 30px; }
+}
+@media (max-width: 700px) {
+  .nav-container { height: 116px; }
+  header { flex-wrap: wrap; gap: 0; justify-content: space-between; }
+  #navLogo { height: 54px; width: 105px; }
+  nav { order: 3; width: 100%; border-top: 1px solid var(--border); }
+  nav ul { width: 100%; justify-content: space-between; }
+  nav a { padding: 14px 4px; font-size: 9px; }
+  html { scroll-padding-top: 130px; }
+  #herosection { min-height: 720px; height: 95svh; background-position: 62% center; }
+  .herocontent { padding-top: 180px; padding-bottom: 70px; }
+  .herocontent::before { font-size: 9px; letter-spacing: .1em; margin-bottom: 24px; }
+  .herocontent h1 { font-size: clamp(70px, 17vw, 110px); }
+  .herocontent p { font-size: 15px; }
+  .hero-actions { gap: 12px; margin-top: 24px; }
+  .herocontent button { width: 200px; height: 50px; }
+  #productionsection { padding-block: 64px; }
+  .productioncontainer { grid-template-columns: 1fr; gap: 32px; }
+  .productionimage img { aspect-ratio: 1.6; }
+  .characterTitle { height: 60px; font-size: 32px; }
+  .charactercard { height: 700px; }
+  #character1, #character2, #character3, #character4, #character5, #character6 { background-size: auto 60%; background-position: 65% top; }
+  .characterGradient { background: linear-gradient(0deg, var(--charcoal) 35%, transparent 85%); }
+  .charactercontent { width: auto; right: var(--gutter); justify-content: flex-end; padding-bottom: 28px; }
+  .charactercontent h1 { margin-bottom: 16px; font-size: 48px; }
+  .charactercontent .chapp { font-size: 14px; }
+  .card { width: 170px; height: 125px; }
+  .card_list { padding-bottom: 32px; }
+  #storylinesection { grid-template-columns: 1fr; }
+  #storycontent { padding: 56px var(--gutter); }
+  #storyimg img { min-height: 0; max-height: 420px; aspect-ratio: 1.3; }
+  #VAsection { padding-block: 64px 40px; }
+  .VAcontent h1, #ingamesection h1 { font-size: 48px; }
+  #ingamesection { padding-block: 48px; }
+  #gameblocksList { min-height: 0; grid-template-columns: 1fr 1fr; }
+  #blocksection1 { grid-column: 1 / -1; }
+  footer { flex-wrap: wrap; gap: 12px 24px; }
+  footer span { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
