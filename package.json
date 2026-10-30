@@ -5,9 +5,12 @@
   "description": "Call of Duty fan site, being rebuilt for Modern Warfare 4",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "check": "node --check homePage.js"
+    "check": "node --check homePage.js && node --check f35-viewer.mjs && node --check flight-motion.mjs && node --test scripts/flight-motion.test.mjs"
   },
   "engines": {
     "node": ">=22"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
   }
 }

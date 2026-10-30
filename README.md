@@ -8,16 +8,19 @@ The preserved prototype still contains Modern Warfare II content and images. Mod
 
 ## Local development
 
-Open `homePage.html` with VS Code Live Server, or serve this folder with any static HTTP server. No dependencies are required for the current site.
+Open `homePage.html` directly, with VS Code Live Server, or serve this folder with any static HTTP server. The committed aircraft viewer bundle also supports direct-file viewing.
 
 With Node.js 22 or later:
 
 ```sh
+npm ci
 npm run check
 npm run build
 ```
 
-The build copies the website into `dist/` and generates `dist/index.html` as its homepage. The original `homePage.html` URL also remains available. `dist/` is generated and is not committed.
+The build extracts the F-35 geometry from `assets/f35.glb`, bundles the Three.js viewer with esbuild, copies the website into `dist/`, and generates `dist/index.html` as its homepage. The original `homePage.html` URL also remains available. `dist/` is generated and is not committed.
+
+The aircraft section includes scroll-driven flight, a barrel roll, decorative rocket launches, moving captions, and drag/keyboard controls. Reduced-motion preferences disable the flight sequence. The model is by bohmerang, adapted for holographic display under CC BY-NC-SA 4.0; see `assets/F35-LICENSE.txt`. Three.js uses the MIT license in `vendor/THREE-LICENSE.txt`.
 
 ## Deploy on Netlify
 

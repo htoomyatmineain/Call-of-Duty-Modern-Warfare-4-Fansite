@@ -1,0 +1,11 @@
+F-35 Lightning II - Fighter Jet - Free
+Creator: bohmerang (https://sketchfab.com/bohmerang)
+Source: https://sketchfab.com/3d-models/f-35-lightning-ii-fighter-jet-free-b1ab1c0090e34b0fbfe667e706023e6d
+License: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+Original source: f35.glb, supplied by the user.
+Changes: removed textures for holographic display; excluded the deployed landing
+gear variant; flattened scene transforms, reoriented, centered and scaled geometry;
+applied cyan translucent surfaces, wireframe and particles.
+The adapted model geometry is provided under CC BY-NC-SA 4.0.

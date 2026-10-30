@@ -19,6 +19,7 @@
     />
 
     <script src="./homePage.js" defer></script>
+    <script src="./f35-viewer.js" defer></script>
   </head>
   <body>
     <div class="nav-container">
@@ -53,6 +54,42 @@
           </div>
         </div>
       </section>
+
+      <div class="flight-scroll" id="flight-sequence">
+      <section id="air-support" aria-labelledby="air-support-title">
+        <div class="air-support-copy">
+          <p class="air-support-kicker">TACTICAL SYSTEMS / AIRFRAME ANALYSIS</p>
+          <h2 id="air-support-title">F-35 <span>LIGHTNING II</span></h2>
+          <p class="air-support-description">STEALTH MULTIROLE FIGHTER</p>
+          <div class="air-support-tags"><span>3D RECONSTRUCTION</span><span>MODEL 001</span></div>
+          <p class="air-support-note">DETAILED AIRFRAME / INTERACTIVE STUDY</p>
+        </div>
+        <div class="aircraft-panel">
+          <div class="aircraft-panel-heading"><span>F-35 / LIGHTNING II</span><span class="aircraft-live">INTERACTIVE 3D</span></div>
+          <div id="f35-stage" tabindex="0" role="img" aria-label="Interactive detailed F-35 aircraft. Drag to rotate, use arrow keys to rotate, and plus or minus to zoom." aria-describedby="f35-instructions">
+            <p id="f35-status" role="status">Preparing aircraft…</p>
+            <div class="flight-caption" aria-hidden="true"><span id="flight-chapter">01 / APPROACH</span><strong id="flight-headline">CLEAR FOR<br />TAKEOFF.</strong><p id="flight-description">A new perspective. Every angle.</p></div>
+            <div class="flight-progress" aria-hidden="true"><span id="flight-phase">APPROACH</span><div><i id="flight-progress-fill"></i></div><span>SCROLL TO FLY ↓</span></div>
+          </div>
+          <div class="hud-overlay" aria-hidden="true">
+            <div class="hud-corners"></div>
+            <div class="hud-top-right">VISUAL SYSTEM<br /><strong>AF / 035</strong><span>● LOCAL RENDER</span></div>
+            <div class="hud-reticle"></div>
+            <div class="hud-side-data"><span>AIRFRAME GEOMETRY</span><div class="hud-bars"></div><p>WING / L ━━━━━━━<br />WING / R ━━━━━━━<br />TAIL / V ━━━━━<br />CORE / C ━━━━━━━━</p><b>STRUCTURE MAPPED</b></div>
+            <div class="hud-bracket hud-bracket-left"></div><div class="hud-bracket hud-bracket-right"></div>
+            <div class="hud-callout"><span>01 / AIRFRAME</span><strong>F-35</strong><p>LIGHTNING II / DIGITAL STUDY</p><i></i></div>
+            <div class="hud-bottom-data"><span>VIEW AZIMUTH <b id="f35-azimuth">126°</b></span><span>PROJECTION / PERSPECTIVE</span><span>RENDER / WEBGL</span></div>
+            <span class="hud-cross hud-cross-left">+</span><span class="hud-cross hud-cross-right">+</span>
+          </div>
+          <div class="aircraft-toolbar">
+            <p id="f35-instructions">SCROLL TO FLY · DRAG TO ROTATE · + / − TO ZOOM</p>
+            <div><button id="f35-rotate" type="button" aria-pressed="false" disabled>Auto rotate</button><button id="f35-reset" type="button" disabled>Reset view ↗</button></div>
+          </div>
+          <p class="aircraft-credit">F-35 model by <a href="https://sketchfab.com/bohmerang" target="_blank" rel="noopener noreferrer">bohmerang</a> · <a href="https://sketchfab.com/3d-models/f-35-lightning-ii-fighter-jet-free-b1ab1c0090e34b0fbfe667e706023e6d" target="_blank" rel="noopener noreferrer">Original model</a> · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 4.0</a> · Adapted for holographic display</p>
+          <noscript><p>Enable JavaScript to explore the 3D aircraft.</p></noscript>
+        </div>
+      </section>
+      </div>
 
       <section id="productionsection">
         <div class="productioncontainer">
